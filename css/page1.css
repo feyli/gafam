@@ -12,11 +12,12 @@
 }
 
 .texte {
-    background-color: #1a1c2c;
+    background-color: #17151D;
     border-radius: 20px;
     padding: 15px;
     font-size: 16px;
     font-weight: 400;
+    color: #CCCCCC;
 }
 
 .texte h1 {
