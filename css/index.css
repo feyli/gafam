@@ -8,16 +8,21 @@
     color: #EDF2F4;
 }
 
+html, body {
+    height: 100%;
+}
+
 #frame-container {
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     gap: 20px;
 }
 
-#frame-container iframe {
+.item {
+    background-color: orange;
     flex-basis: 0;
     flex-grow: 1;
-    border-radius: 20px;
     border: solid 5px black;
+    border-radius: 20px;
 }
