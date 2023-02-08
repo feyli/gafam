@@ -1,0 +1,23 @@
+#indexTitle {
+    position: fixed;
+    top: 10px;
+    left: 30px;
+    background: #8D99AE;
+    padding: 10px;
+    border-radius: 10px;
+    color: #EDF2F4;
+}
+
+#frame-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#frame-container iframe {
+    flex-basis: 0;
+    flex-grow: 1;
+    border-radius: 20px;
+    border: solid 5px black;
+}
