@@ -8,8 +8,10 @@
     border-radius: 10px;
 }
 
-#topnav-heading {
+.noselect {
+    cursor: default;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 .top-button {
@@ -31,7 +33,7 @@
 
 .top-button:not(.active):active {
     box-shadow: none;
-    transform: scale(0.9);
+    transform: initial;
 }
 
 @media screen and (max-width: 770px) {
