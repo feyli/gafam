@@ -18,16 +18,18 @@
     font-size: 100%;
     border-radius: 5px;
     box-shadow: 0 3px 0 0 #A30000;
+    user-select: none;
+    -webkit-user-select: none;
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
-.top-button:hover {
+.top-button:not(.active):hover {
     background-color: #d90429;
     box-shadow: none;
     transform: scale(1.1);
 }
 
-.top-button:active {
+.top-button:not(.active):active {
     box-shadow: none;
     transform: scale(0.9);
 }
@@ -42,6 +44,13 @@
         font-size: 90%;
     }
 }
+
+.top-button.active {
+    background-color: #669bbc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
 
 @media screen and (max-width: 690px) {
     .top-button {
