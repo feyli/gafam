@@ -8,10 +8,6 @@
     color: #EDF2F4;
 }
 
-html, body {
-    height: 100%;
-}
-
 #frame-container {
     display: flex;
     height: 100%;
@@ -23,6 +19,6 @@ html, body {
     background-color: orange;
     flex-basis: 0;
     flex-grow: 1;
-    border: solid 5px black;
+    border: solid 5px white;
     border-radius: 20px;
 }
