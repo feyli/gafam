@@ -1,5 +1,8 @@
 window.onload = () => {
-    window.document.getElementById('item1').addEventListener('click', () => {
-        window.location.href = 'https://google.com';
+    const divs = document.querySelectorAll('.page')
+    divs.forEach(div => {
+        div.addEventListener('click', () => {
+            document.location.href = `html/${div.id}.html`;
+        });
     });
-}
+};

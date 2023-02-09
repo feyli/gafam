@@ -5,17 +5,20 @@
     <title>Les GAFAM</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
-    <h1 id="indexTitle">Accueil - Les GAFAM</h1>
-    <div id="frame-container">
-        <!--suppress HtmlDeprecatedAttribute -->
-        <iframe class="item" id="item1" src="html/page1.html" sandbox scrolling="no"></iframe>
-        <!--suppress HtmlDeprecatedAttribute -->
-        <iframe class="item" src="html/page2.html" sandbox scrolling="no"></iframe>
-        <!--suppress HtmlDeprecatedAttribute -->
-        <iframe class="item" src="html/page3.html" sandbox scrolling="no"></iframe>
+    <h1 id="indexTitle">Bienvenue sur ce site de présentation des GAFAM</h1>
+    <div id="page-container">
+        <div class="page" id="page1">
+            <h1 class="hover-underline-animation">Qu'est-ce que c'est ?</h1>
+        </div>
+        <div class="page" id="page2">
+            <h1 class="hover-underline-animation">Leur domination dans le monde</h1>
+        </div>
+        <div class="page" id="page3">
+            <h1 class="hover-underline-animation">Les répercussions</h1>
+        </div>
     </div>
 </body>
 </html>
