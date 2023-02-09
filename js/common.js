@@ -1,24 +1,21 @@
-const topnav = fetch('../components/topnav.html');
-const cookies = fetch('../components/cookies.html');
+// import topnav from ../components/topnav.html
+$(function() {
+  $("body").prepend("<div id='temp-container'></div>");
+  $("#temp-container").load("../components/topnav.html", function() {
+    $("#temp-container").contents().unwrap();
+  });
+});
 
-topnav.then(response => response.text())
-    .then(data => {
-        document.body.innerHTML = data + document.body.innerHTML;
-        let activePageButton = document.getElementById(window.location.pathname.split('/').pop().split('.')[0])
-        activePageButton.classList.add('active');
-        activePageButton.removeAttribute('href');
-    });
-cookies.then(response => response.text())
-    .then(data => {
-        document.body.innerHTML = document.body.innerHTML + data;
-    });
 
 window.onload = () => {
     if (!localStorage.getItem('cookies')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-        document.getElementById('cookie-banner-accept').addEventListener('click', () => {
+        $("body").append("<div id='cookie-temp-container'></div>");
+        $("#cookie-temp-container").load("../components/cookies.html", function() {
+            $("#cookie-temp-container").contents().unwrap();
+            $('#cookie-banner-accept').on('click', () => {
             document.getElementById('cookie-banner').style.display = 'none';
             localStorage.setItem('cookies', 'true');
+        });
         });
     }
 };

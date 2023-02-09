@@ -14,6 +14,8 @@ h1 {
 .item-container {
     display: flex;
     gap: 20px;
+    flex-basis: 0;
+    flex-grow: 1;
     flex-direction: row;
     text-align: center;
 }
@@ -43,7 +45,7 @@ h1 {
     margin-bottom: 15px;
     width: 30px;
     height: 30px;
-    background: radial-gradient(#797878, #424242);
+    background: radial-gradient(#787878, #424242);
     border-radius: 16px;
     padding: 15px;
 }
@@ -97,15 +99,23 @@ h1 {
     content: url("../svg/ux.svg");
 }
 
+.line3-item:nth-child(1) h1:before {
+    content: url("../svg/marketing.svg");
+}
+
+.line3-item:nth-child(2) h1:before {
+    content: url("../svg/rocket.svg");
+}
+
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
+		background-position: 0 50%;
 	}
 	50% {
 		background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 0 50%;
 	}
 }

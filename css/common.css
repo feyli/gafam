@@ -23,6 +23,8 @@ a {
 #topnav {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 8px;
     align-items: center;
     padding: 20px;
     height: 30px;
@@ -91,7 +93,7 @@ a {
 /* cookies styles */
 
 #cookie-banner {
-    display: none;
+    display: block;
     position: fixed;
     bottom: 0;
     left: 0;
