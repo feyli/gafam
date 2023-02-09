@@ -6,6 +6,12 @@ window.onload = () => {
             localStorage.setItem('cookies', 'true');
         });
     }
+    // add .active class to the button that's href is the end of the current page href
+    const currentHref = document.location.href;
+    const currentHrefEnd = currentHref.substring(currentHref.lastIndexOf('/') + 1);
+    const activeButton = document.querySelector(`a[href$="${currentHrefEnd}"]`);
+    activeButton.classList.add('active');
+    activeButton.removeAttribute('href');
 };
 
 function onKonamiCode(cb) {
