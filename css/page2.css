@@ -43,7 +43,7 @@ h1 {
     margin-bottom: 15px;
     width: 30px;
     height: 30px;
-    background: radial-gradient(#777, #494949);
+    background: radial-gradient(#797878, #424242);
     border-radius: 16px;
     padding: 15px;
 }
@@ -51,6 +51,10 @@ h1 {
 .item p {
     color: #CCCCCC;
     margin: 0;
+}
+
+.item:hover > h1:before {
+    animation: gradient 5s infinite;
 }
 
 .line1-item {
@@ -63,10 +67,45 @@ h1 {
 
 .line1-item:nth-child(2) {
     flex-grow: 2;
-} h1:before {
+}
+
+.line1-item:nth-child(2) h1:before {
     content: url("../svg/company.svg");
 }
 
 .line1-item:nth-child(3) h1:before {
     content: url("../svg/monopoly.svg");
+}
+
+.line2-item {
+    flex-grow: 2;
+}
+
+.line2-item:nth-child(1) h1:before {
+    content: url("../svg/interoperability.svg");
+}
+
+.line2-item:nth-child(2) h1:before {
+    content: url("../svg/ai.svg");
+}
+
+.line2-item:nth-child(3) {
+    flex-grow: 3;
+}
+
+.line2-item:nth-child(3) h1:before {
+    content: url("../svg/ux.svg");
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
