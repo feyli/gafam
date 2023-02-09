@@ -12,7 +12,7 @@
     border-radius: 10px;
     color: #EDF2F4;
     z-index: 5;
-    animation: title 2s ease-in-out forwards;
+    animation: title 3s ease-in-out forwards;
     pointer-events: none;
 }
 
