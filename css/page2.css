@@ -2,6 +2,7 @@ h1 {
     margin: 0;
 }
 
+/* basic flexbox structure */
 #line-container {
     display: flex;
     flex-direction: column;
@@ -39,7 +40,9 @@ h1 {
     margin-bottom: 15px;
 }
 
-.item h1:before {
+/* adding generic properties to .item h1:before */
+/* making the content of ::before go above the root element */
+.item h1::before {
     top: -1em;
     display: block;
     margin-bottom: 15px;
@@ -55,15 +58,11 @@ h1 {
     margin: 0;
 }
 
-.item:hover > h1:before {
-    animation: gradient 5s infinite;
-}
-
 .line1-item {
     flex-grow: 3;
 }
 
-.line1-item:nth-child(1) h1:before {
+.line1-item:nth-child(1) h1::before {
     content: url("../svg/data.svg");
 }
 
@@ -71,11 +70,11 @@ h1 {
     flex-grow: 2;
 }
 
-.line1-item:nth-child(2) h1:before {
+.line1-item:nth-child(2) h1::before {
     content: url("../svg/company.svg");
 }
 
-.line1-item:nth-child(3) h1:before {
+.line1-item:nth-child(3) h1::before {
     content: url("../svg/monopoly.svg");
 }
 
@@ -83,11 +82,11 @@ h1 {
     flex-grow: 2;
 }
 
-.line2-item:nth-child(1) h1:before {
+.line2-item:nth-child(1) h1::before {
     content: url("../svg/interoperability.svg");
 }
 
-.line2-item:nth-child(2) h1:before {
+.line2-item:nth-child(2) h1::before {
     content: url("../svg/ai.svg");
 }
 
@@ -95,15 +94,15 @@ h1 {
     flex-grow: 3;
 }
 
-.line2-item:nth-child(3) h1:before {
+.line2-item:nth-child(3) h1::before {
     content: url("../svg/ux.svg");
 }
 
-.line3-item:nth-child(1) h1:before {
+.line3-item:nth-child(1) h1::before {
     content: url("../svg/marketing.svg");
 }
 
-.line3-item:nth-child(2) h1:before {
+.line3-item:nth-child(2) h1::before {
     content: url("../svg/rocket.svg");
 }
 
@@ -128,17 +127,4 @@ h1 {
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom;
-}
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
 }

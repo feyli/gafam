@@ -51,6 +51,7 @@ body {
     margin: auto;
 }
 
+/* underline titles page titles when card is hovered */
 .hover-underline-animation {
     display: inline-block;
     position: relative;
